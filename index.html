@@ -1,6 +1,5 @@
 <html>
   <head>
-    
     <link rel="stylesheet" href="/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -10,9 +9,13 @@
   <body>
     <header class="header">
       <div class="inside-out">
-        <h1>Generate a <br><span class="h1-span">random password</span></h1>
+        <h1>Generate a <br /><span class="h1-span">random password</span></h1>
         <p>Never use an insecure password again.</p>
-        <button id="generate-password" onclick="generatePassword()" class="generate-btn">
+        <button
+          id="generate-password"
+          onclick="generatePassword()"
+          class="generate-btn"
+        >
           Generate passwords
         </button>
         <span class="line"></span>
@@ -20,6 +23,116 @@
         <button id="password2" class="password-btn"></button>
       </div>
     </header>
-    <script src="/index.js"></script>
+    <script>
+      const characters = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "~",
+        "",
+        "!",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "(",
+        ")",
+        "_",
+        "-",
+        "+",
+        "=",
+        "{",
+        "[",
+        "}",
+        "]",
+        ",",
+        "|",
+        ":",
+        ";",
+        "<",
+        ">",
+        ".",
+        "?",
+        "/",
+      ];
+
+      let passwordText1 = document.getElementById("password1");
+      let passwordText2 = document.getElementById("password2");
+      function generatePassword() {
+        let password1 = "";
+        let password2 = "";
+        for (let i = 0; i < 15; i++) {
+          let randomNumber1 = Math.floor(Math.random() * characters.length);
+          let randomNumber2 = Math.floor(Math.random() * characters.length);
+
+          password1 += characters[randomNumber1];
+          password2 += characters[randomNumber2];
+        }
+        passwordText1.textContent = password1;
+        passwordText2.textContent = password2;
+      }
+    </script>
   </body>
 </html>
