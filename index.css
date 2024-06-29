@@ -1,3 +1,124 @@
 body {
     margin: 0;
-}
+    background-color: #1f2937;
+    font-family: "";
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+  
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 3rem;
+    text-align: start;
+  }
+  
+  .h1-span {
+    color: #4adf86;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  p {
+    flex-grow: 2;
+    flex-basis: 100%;
+    font-size: 1.5rem;
+  }
+  .line{
+      border: solid #273549 .5px;
+      width: 100%;
+  }
+  .inside-out {
+    border: #273549 solid;
+    height: 60%;
+    width: 30%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+  }
+  .generate-btn {
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: #10b981;
+    color: white;
+  }
+  button {
+    font-size: 1.5rem;
+    border: solid 0.5px transparent;
+    border-radius: 5px;
+    color: #55f991;
+    background-color: #273549;
+    height: 50px;
+    cursor: pointer;
+  }
+  .password-btn{
+      flex: 1 0;
+  }
+  /* Media Queries para Diseño Responsivo */
+  @media (max-width: 1200px) {
+    /* Ajustes para pantallas medianas */
+    .inside-out {
+      width: 80%;
+      padding: 30px;
+    }
+  
+    h1 {
+      font-size: 2.5rem; /* Ajustar tamaño del encabezado */
+    }
+  
+    .generate-btn,
+    .password-btn {
+      width: 100%;
+      font-size: 1.25rem; /* Ajustar tamaño de fuente en botones */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Ajustes para pantallas pequeñas */
+    .inside-out {
+      width: 100%;
+      padding: 20px;
+      flex-direction: column; /* Cambiar la dirección del flex a columna */
+      align-items: center; /* Alinear elementos al centro */
+    }
+  
+    h1 {
+      font-size: 2rem; /* Reducir tamaño del encabezado */
+      text-align: center; /* Centrar el texto del encabezado */
+    }
+  
+    p {
+      font-size: 1.25rem; /* Reducir tamaño de fuente del párrafo */
+      text-align: center; /* Centrar el texto del párrafo */
+      flex-basis: auto; /* Ajustar el ancho base */
+    }
+  
+    .generate-btn,
+    .password-btn {
+      width: 100%; /* Hacer que los botones ocupen el 100% del ancho */
+      font-size: 1rem; /* Reducir tamaño de fuente en botones */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas */
+    h1 {
+      font-size: 1.5rem; /* Reducir más el tamaño del encabezado */
+    }
+  
+    p {
+      font-size: 1rem; /* Reducir tamaño de fuente del párrafo */
+    }
+  
+    .inside-out {
+      padding: 10px;
+    }
+  }
